@@ -1,0 +1,4 @@
+Download the files and zip into local system.
+CD into the folder that contains "src" folder.
+Run npm install to download the required files.A
+After installation run the file locally using, NPM START.
