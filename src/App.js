@@ -12,6 +12,7 @@ const App = () => {
   const [userData, setUserData] = useState([]);
   const [userIds, setUserIds] = useState([]);
   const [cartIsShown, setCartIsShown] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const displayTitle = (item, titleSlug) => {
     const existingTitles = userData.map((innerArray) => innerArray[0]);
@@ -24,6 +25,7 @@ const App = () => {
     });
 
     setUserData(uniquePairs);
+    
   };
 
   const handleFormSubmit = async (event) => {
@@ -42,6 +44,7 @@ const App = () => {
     const url = `${API_ENDPOINT}?query=${encodeURIComponent(query)}`;
 
     try {
+      setIsLoading(true);
       const response = await fetch(url);
       const result = await response.json();
 
@@ -57,9 +60,10 @@ const App = () => {
       if (userName.length > 0 && !userIds.includes(userName.toLowerCase())) {
         setUserIds((prevState) => [...prevState, userName.toLowerCase()]);
       }
-
+      setIsLoading(false);
       setUserName("");
     } catch (error) {
+      setIsLoading(false);
       setCartIsShown(true);
     }
   };
@@ -103,6 +107,8 @@ const App = () => {
               Add Friend
             </button>
           </form>
+          {isLoading && <p>Loading data ...</p>}
+
           {userIds.map((item) => (
             <a href={`https://leetcode.com/${item}`} target="_blank">
               <button className="displayNameButton">{item}</button>
