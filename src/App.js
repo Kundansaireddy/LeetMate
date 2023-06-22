@@ -38,10 +38,10 @@ const App = () => {
       const response = await fetch(url);
       const result = await response.json();
 
-      const titles = result.data.recentAcSubmissionList.map(
+      const titles = result.recentAcSubmissionList.map(
         (submission) => submission.title
       );
-      const titleSlugs = result.data.recentAcSubmissionList.map(
+      const titleSlugs = result.recentAcSubmissionList.map(
         (submission) => submission.titleSlug
       );
 
