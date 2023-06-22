@@ -31,7 +31,7 @@ const App = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    const url = `${API_ENDPOINT}${userName}}`;
+    const url = `${API_ENDPOINT}${userName}`;
 
     try {
       setIsLoading(true);
