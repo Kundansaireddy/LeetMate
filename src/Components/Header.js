@@ -6,7 +6,7 @@ const Header = (props) => {
       <span className="leetmate">
         &nbsp;&nbsp;&nbsp;
         {/* <img src={Img} alt="logo" width="30" height="30" /> */}
-        <FaCode />
+        {/*<FaCode />*/}
         &nbsp; LeetMate
       </span>
       <p className="problemCount">
