@@ -7,7 +7,7 @@ const Header = (props) => {
         &nbsp;&nbsp;&nbsp;
         {/* <img src={Img} alt="logo" width="30" height="30" /> */}
         <FaCode />
-        &nbsp; LEETMATE
+        &nbsp; LeetMate
       </span>
       <p className="problemCount">
         &nbsp;&nbsp;&nbsp; Problem Count: {props.numberOfProblems}
