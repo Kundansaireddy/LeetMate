@@ -1,4 +1,5 @@
 Updated version with the delete function is updated.
+![image](https://github.com/Kundansaireddy/LeetMate/assets/81676583/d69442e0-a47f-4cec-92df-a29b0a41dc8a)
 
 # Getting Started with Create React App
 
